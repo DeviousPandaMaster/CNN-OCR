@@ -4,9 +4,9 @@ import os
 import json
 from matplotlib import pyplot as plt
 
-TrainPath = os.path.expanduser('~/Desktop/ML-Stuff/CharacterOCR-torch/CharTrain.npz')
-TestPath = os.path.expanduser('~/Desktop/ML-Stuff/CharacterOCR-torch/CharTest.npz')
-decoderJson = os.path.expanduser('~/Desktop/ML-Stuff/CharacterOCR-torch/TMNIST-Decoder.json')
+TrainPath = os.path.expanduser('CharTrain.npz')
+TestPath = os.path.expanduser('CharTest.npz')
+decoderJson = os.path.expanduser('TMNIST-Decoder.json')
 train, test = np.load(TrainPath), np.load(TestPath)
 features_train_reshaped, target_train_categorical = train.get('arr_0'), train.get('arr_1')
 features_test_reshaped, target_test_categorical = test.get('arr_0'), test.get('arr_1')
